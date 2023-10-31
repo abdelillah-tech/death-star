@@ -12,5 +12,5 @@ Can the millenium falcon save the star ? GIVE ME THE ODDS !
 ## CLI Mode
 ### Run r2d2
 * The first time you have to run ```make release```
-* From the forlder r2d2 run ```./give-me-the-odds <millennium-falcon-config-json> <empire-config-json>
+* From the forlder r2d2 run ```./give-me-the-odds <millennium-falcon-config-json> <empire-config-json>```
 
