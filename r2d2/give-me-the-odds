@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <path_to_falcon_conf> <path_to_empire_conf>"
+    exit 1
+fi
+
+jar_file_pattern="millennium-falcon-computer-*.jar"
+falcon_conf="$1"
+empire_conf="$2"
+
+file_list=($(compgen -G "$jar_file_pattern"))
+
+if [ ${#file_list[@]} -gt 0 ]; then
+    jar_file="${file_list[0]}"
+else
+    echo "JAR file not found: $jar_file"
+    exit 1
+fi
+
+if [ ! -f "$falcon_conf" ]; then
+    echo "Falcon config file not found: $jar_file"
+    exit 1
+fi
+
+if [ ! -f "$empire_conf" ]; then
+    echo "Empire config file not found: $jar_file"
+    exit 1
+fi
+
+# Launch the Java application
+java -jar "$jar_file" "$falcon_conf" "$empire_conf"

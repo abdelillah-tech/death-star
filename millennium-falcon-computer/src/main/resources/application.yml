@@ -1,0 +1,6 @@
+config:
+  path: "src/main/resources/millennium-falcon.json"
+
+spring:
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
