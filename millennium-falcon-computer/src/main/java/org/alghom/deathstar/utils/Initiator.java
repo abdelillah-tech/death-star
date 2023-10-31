@@ -27,7 +27,7 @@ public class Initiator {
         try {
             MillenniumFalconDTO millenniumFalconDTO = readConfigFile(falconConfigurationPath, MillenniumFalconDTO.class);
 
-            LOGGER.info("Ship configuration is ready");
+            LOGGER.debug("Ship configuration is ready");
             return FalconMapper.millenniumFalconDTO2MillenniumFalcon(millenniumFalconDTO);
         } catch (IOException e) {
             throw new WrongJsonFormat(falconConfigurationPath);
@@ -38,7 +38,7 @@ public class Initiator {
         try {
             EmpireDTO empireDTO = readConfigFile(empireConfigurationPath, EmpireDTO.class);
 
-            LOGGER.info("Empire data received");
+            LOGGER.debug("Empire data received");
             return FalconMapper.empireDTO2EmpireMapper(empireDTO);
         } catch (IOException e) {
             throw new WrongJsonFormat(empireConfigurationPath);
@@ -52,7 +52,7 @@ public class Initiator {
             DataSource dataSource = sqLiteDataSource.dataSource();
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 
-            LOGGER.info("Ship data base is ready");
+            LOGGER.debug("Ship data base is ready");
             return jdbcTemplate;
         } catch (IOException e) {
             throw new WrongJsonFormat(configurationPath);
