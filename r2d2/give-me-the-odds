@@ -19,12 +19,12 @@ else
 fi
 
 if [ ! -f "$falcon_conf" ]; then
-    echo "Falcon config file not found: $jar_file"
+    echo "Falcon config file not found"
     exit 1
 fi
 
 if [ ! -f "$empire_conf" ]; then
-    echo "Empire config file not found: $jar_file"
+    echo "Empire config file not found"
     exit 1
 fi
 
