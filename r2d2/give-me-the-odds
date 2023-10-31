@@ -14,7 +14,7 @@ file_list=($(compgen -G "$jar_file_pattern"))
 if [ ${#file_list[@]} -gt 0 ]; then
     jar_file="${file_list[0]}"
 else
-    echo "JAR file not found: $jar_file"
+    echo "JAR file not found"
     exit 1
 fi
 
