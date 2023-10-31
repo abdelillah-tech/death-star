@@ -1,5 +1,5 @@
 # death-star
-Can the millenium falcon save the star ? GIVE ME THE ODDS !
+Can the millennium falcon save the Death Star ? GIVE ME THE ODDS !
 
 ## GUI Mode
 ### Run millennium-falcon-computer
